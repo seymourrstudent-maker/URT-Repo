@@ -12,8 +12,18 @@ import textwrap
 from pathlib import Path
 
 MEMBERS_DIR = Path(__file__).parent / "members"
-REQUIRED = ["name", "github", "major", "year", "fun_fact"]
+REQUIRED = ["name", "github", "major", "year", "fun_fact", "preferred_project"]
 YEARS = ["freshman", "sophomore", "junior", "senior", "grad"]
+PROJECTS = [
+    "sensors",
+    "simulation",
+    "computer-vision",
+    "autonomy",
+    "controls",
+    "onboard-systems",
+    "ai",
+    "undecided",
+]
 
 
 def read_card(path):
@@ -47,6 +57,13 @@ def check_card(path, card):
     year = card.get("year", "")
     if year and not year.startswith("<") and year.lower() not in YEARS:
         problems.append(f"'year' should be one of: {', '.join(YEARS)}")
+    projects = card.get("preferred_project", "")
+    if projects and not projects.startswith("<"):
+        for project in projects.split(","):
+            if project.strip().lower() not in PROJECTS:
+                problems.append(
+                    f"'{project.strip()}' isn't a project area. Pick from: {', '.join(PROJECTS)}"
+                )
     return problems
 
 
@@ -84,11 +101,11 @@ def main():
         else:
             cards.append(card)
 
-    table = ["| Name | GitHub | Major | Year | Fun fact |", "|---|---|---|---|---|"]
+    table = ["| Name | GitHub | Major | Year | Preferred project | Fun fact |", "|---|---|---|---|---|---|"]
     for card in cards:
         table.append(
             f"| {card['name']} | @{card['github']} | {card['major']} "
-            f"| {card['year'].capitalize()} | {card['fun_fact']} |"
+            f"| {card['year'].capitalize()} | {card['preferred_project']} | {card['fun_fact']} |"
         )
 
     print(f"Underwater Robotics - Computing Division ({len(cards)} members)")
