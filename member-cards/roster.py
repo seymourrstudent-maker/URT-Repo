@@ -8,6 +8,7 @@ with a problem shows up as a red X on the PR.
 """
 import os
 import sys
+import textwrap
 from pathlib import Path
 
 MEMBERS_DIR = Path(__file__).parent / "members"
@@ -49,6 +50,23 @@ def check_card(path, card):
     return problems
 
 
+def print_card(card):
+    """Prints one member as a block, one answer per line, wrapping long answers."""
+    print(f"\n{card['name']} (@{card['github']})")
+    details = {key: value for key, value in card.items() if key not in ("name", "github")}
+    if "year" in details:
+        details["year"] = details["year"].capitalize()
+    labels = {key: key.replace("_", " ").capitalize() + ":" for key in details}
+    width = max(len(label) for label in labels.values()) + 1
+    for key, value in details.items():
+        print(textwrap.fill(
+            value,
+            width=76,
+            initial_indent="  " + labels[key].ljust(width),
+            subsequent_indent="  " + " " * width,
+        ))
+
+
 def main():
     cards = []
     all_problems = {}
@@ -73,8 +91,9 @@ def main():
             f"| {card['year'].capitalize()} | {card['fun_fact']} |"
         )
 
-    print(f"Underwater Robotics - Computing Division ({len(cards)} members)\n")
-    print("\n".join(table))
+    print(f"Underwater Robotics - Computing Division ({len(cards)} members)")
+    for card in cards:
+        print_card(card)
 
     # On GitHub Actions, also show the roster on the run's summary page.
     summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
