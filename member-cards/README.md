@@ -14,7 +14,8 @@ When you're done, `python roster.py` will show you in the team roster.
 1. **Accept your invite** to collaborate on the repo (check your email or github.com/notifications).
 2. **Install Git:** https://git-scm.com/downloads (Windows: keep all the default options).
 3. **Install Python 3:** https://www.python.org/downloads/ (Windows: check **"Add python.exe to PATH"**).
-4. **Tell Git who you are.** Open a terminal (Windows: *Git Bash*) and run:
+4. **Install VS Code:** https://code.visualstudio.com (Windows: check **"Add to PATH"** during setup).
+5. **Tell Git who you are.** Open a terminal (Windows: *Git Bash*) and run:
 
    ```bash
    git config --global user.name "Your Name"
@@ -49,7 +50,19 @@ Copy the template and name the copy after your GitHub username:
 cp members/_TEMPLATE.yml members/<your-github-username>.yml
 ```
 
-Open your new file in any editor (VS Code, Notepad, etc.) and replace every `<...>` value.
+Open the folder in VS Code:
+
+```bash
+code .
+```
+
+Open `members/<your-github-username>.yml` from the file list on the left and replace every `<...>` value.
+Save the file (Ctrl+S, or Cmd+S on Mac).
+
+> **Tip:** VS Code has a built-in terminal (**Terminal → New Terminal**), so you can run the rest of
+> the commands there instead of switching windows. On Windows, pick **Git Bash** from the dropdown
+> next to the **+** in the terminal panel.
+
 Then check your card:
 
 ```bash
