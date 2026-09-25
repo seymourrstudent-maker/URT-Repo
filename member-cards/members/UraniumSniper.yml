@@ -2,12 +2,12 @@
 # Copy it to members/<your-github-username>.yml, then replace every <...> value.
 # Keep the "key: value" format. Lines starting with # are ignored.
 
-name: <Your Name>
-github: <your-github-username>
-major: <Computer Science, Computer Engineering, ...>
-year: <freshman, sophomore, junior, senior, or grad>
-favorite_marvel_character: <optional, delete this line if you want>
-fun_fact: <one sentence about you>
+name: Raegan
+github: UraniumSniper
+major: Nuclear Engineering
+year: Freshman
+favorite_marvel_character: Moon Knight
+fun_fact: I collect Uranium Glass and other nuclear-related artifacts (pencil dosimeter, A-Bomb Pin, etc.).
 
 # Which area of the robot's code do you want to work on? Pick one or more,
 # separated by commas (like: sensors, computer-vision). Not sure yet? Use: undecided
@@ -21,4 +21,4 @@ fun_fact: <one sentence about you>
 #   onboard-systems  The robot's computers, camera streaming, and the robot-to-surface network
 #   ai               Training machine learning models for the robot
 #   undecided        Not sure yet? That's fine!
-preferred_project: <one or more from the list above>
+preferred_project: undecided
