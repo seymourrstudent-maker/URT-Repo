@@ -1,0 +1,23 @@
+# Member card template. Don't edit this file!
+# Copy it to members/<your-github-username>.yml, then replace every <...> value.
+# Keep the "key: value" format. Lines starting with # are ignored.
+
+name: Gavin Springer
+github: GVN8R
+major: Computer Science
+year: Freshman
+fun_fact: I hate fun (see major)
+
+# Which area of the robot's code do you want to work on? Pick one or more,
+# separated by commas (like: sensors, computer-vision). Not sure yet? Use: undecided
+#
+#   sensors          Reading the robot's sensors (depth, orientation, temperature)
+#                    and getting that data to the surface
+#   simulation       A virtual robot and pool, so we can test code without the real robot
+#   computer-vision  Using the cameras: spotting objects, following lines, measuring things
+#   autonomy         Letting the robot make its own decisions: path-following, docking
+#   controls         Piloting: joystick input, thrusters, talking to the flight controller
+#   onboard-systems  The robot's computers, camera streaming, and the robot-to-surface network
+#   ai               Training machine learning models for the robot
+#   undecided        Not sure yet? That's fine!
+preferred_project: undecided
