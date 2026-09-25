@@ -1,0 +1,23 @@
+name: Check member cards
+
+on:
+  pull_request:
+    paths: ["member-cards/**", ".github/workflows/member-cards.yml"]
+  push:
+    branches: [main]
+    paths: ["member-cards/**", ".github/workflows/member-cards.yml"]
+
+defaults:
+  run:
+    working-directory: member-cards
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate cards and print roster
+        run: python roster.py

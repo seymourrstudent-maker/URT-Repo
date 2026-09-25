@@ -1,0 +1,10 @@
+# Member card template. Don't edit this file!
+# Copy it to members/<your-github-username>.yml, then replace every <...> value.
+# Keep the "key: value" format. Lines starting with # are ignored.
+
+name: <Your Name>
+github: <your-github-username>
+major: <Computer Science, Computer Engineering, ...>
+year: <freshman, sophomore, junior, senior, or grad>
+favorite_marvel_character: <optional, delete this line if you want>
+fun_fact: <one sentence about you>

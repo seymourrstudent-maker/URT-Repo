@@ -1,0 +1,54 @@
+{
+  "01_center.png": {
+    "answer": "STRAIGHT",
+    "why": "The line is right in the middle."
+  },
+  "02_left.png": {
+    "answer": "LEFT",
+    "why": "The line is on the left side."
+  },
+  "03_right.png": {
+    "answer": "RIGHT",
+    "why": "The line is on the right side."
+  },
+  "04_slightly_right.png": {
+    "answer": "STRAIGHT",
+    "why": "The line is only a little right of center, inside the deadband."
+  },
+  "05_diagonal_center.png": {
+    "answer": "STRAIGHT",
+    "why": "The line is tilted, but its center is in the middle."
+  },
+  "06_diagonal_left.png": {
+    "answer": "LEFT",
+    "why": "The line is tilted, and its center is on the left."
+  },
+  "07_murky_left.png": {
+    "answer": "LEFT",
+    "why": "Dark, murky water. Is your brightness (V) threshold too high?"
+  },
+  "08_fish_and_line.png": {
+    "answer": "RIGHT",
+    "why": "The line is on the right; the orange fish on the left is not the line."
+  },
+  "09_seaweed_and_buoy.png": {
+    "answer": "STRAIGHT",
+    "why": "The line is in the middle; ignore the green seaweed and yellow buoy."
+  },
+  "10_fish_only.png": {
+    "answer": "LOST",
+    "why": "There is no line, only a fish. A fish is not line-shaped."
+  },
+  "11_short_line_and_big_buoy.png": {
+    "answer": "LEFT",
+    "why": "The line (top-left) is smaller than the yellow buoy. Is your hue range too wide?"
+  },
+  "12_empty.png": {
+    "answer": "LOST",
+    "why": "There's nothing here but water and rocks."
+  },
+  "13_far_right.png": {
+    "answer": "RIGHT",
+    "why": "The line is at the far right edge."
+  }
+}
